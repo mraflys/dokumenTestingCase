@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['submit'])) {
-    $target_dir = "uploads/";
+    $target_dir = "./uploads/";
     
     // Create target directory if it doesn't exist
     if (!file_exists($target_dir)) {
