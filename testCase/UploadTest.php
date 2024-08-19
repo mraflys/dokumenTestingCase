@@ -10,7 +10,7 @@ class UploadTest extends TestCase
 
     public function testUploadFiles()
     {
-        $filePath = './uploads/test_image.jpg';
+        $filePath = $this->uploadDir . './test_image.jpg';
         file_put_contents($filePath, 'test content'); 
         $_FILES['file'] = [
             'name' => 'test_image.jpg',
