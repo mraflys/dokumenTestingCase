@@ -10,7 +10,8 @@ class UploadTest extends TestCase
 
     public function testUploadFiles()
     {
-        $filePath = $this->uploadDir . './test_image.jpg';
+        $fileName = 'test_image.jpg';
+        $filePath = $this->uploadDir . './' . $fileName;
         file_put_contents($filePath, 'test content'); 
         $_FILES['file'] = [
             'name' => 'test_image.jpg',
@@ -28,7 +29,7 @@ class UploadTest extends TestCase
         $this->assertStringContainsString('The files have been uploaded.', $output);
 
         // Assert that the files were moved to the correct location
-        $this->assertFileExists($this->uploadDir . 'test_image.jpg');
+        $this->assertFileExists($this->uploadDir . $fileName);
 
         // Assert that PHPUnit was executed and returned a successful result
         $this->assertStringContainsString('OK', $output);
