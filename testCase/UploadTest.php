@@ -21,7 +21,6 @@ class UploadTest extends TestCase
         ];        
         $_POST['submit'] = 'Upload';
         // Capture the output of the upload script
-        print($this->uploadDir);
         ob_start();
         include $this->uploadScript;
         $output = ob_get_clean();
