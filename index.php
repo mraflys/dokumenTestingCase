@@ -2,18 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Upload Image and Test Case</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
 </head>
 <body>
-    <h2>Upload Image and Test Case</h2>
+    <h2>Upload File</h2>
     <form action="upload.php" method="post" enctype="multipart/form-data">
-        <label for="image">Select image to upload:</label>
-        <input type="file" name="image" id="image" accept="image/*"><br><br>
-        
-        <label for="testcase">Select test case to upload:</label>
-        <input type="file" name="testcase" id="testcase" accept=".php"><br><br>
-        
-        <input type="submit" value="Upload" name="submit">
+        <label for="file">Choose a file:</label>
+        <input type="file" name="file" id="file">
+        <br><br>
+        <input type="submit" name="submit" value="Upload">
     </form>
 </body>
 </html>
