@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['submit'])) {
-    $target_dir = __DIR__ . "./../uploads/";
+    $target_dir = __DIR__ . "/../uploads/";
     
     // Create target directory if it doesn't exist
     if (!file_exists($target_dir)) {
@@ -15,7 +15,6 @@ if (isset($_POST['submit'])) {
     }
     // Save the files
     $file_target_file = $target_dir . basename($_FILES["file"]["name"]);
-
     if (move_uploaded_file($_FILES["file"]["tmp_name"], $file_target_file)) {
         echo "The files have been uploaded.";
     }
