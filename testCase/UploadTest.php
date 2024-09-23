@@ -6,7 +6,7 @@ class UploadTest extends TestCase
     private $uploadDir = __DIR__ . '/../uploads/';
     private $imagePath = __DIR__ . '/test_image.jpg';
     private $testCasePath = __DIR__ . '/test_case.php';
-    private $uploadScript = __DIR__ . '/../upload.php';
+    private $uploadScript = __DIR__ . '/../controllers/upload.php';
 
     public function testUploadFiles()
     {
